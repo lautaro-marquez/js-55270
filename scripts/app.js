@@ -5,7 +5,7 @@ let sistema = true;
 while (sistema) {
     let option = parseInt(
         prompt(
-            "A continuación, seleccione la opción que desee:\n 1. Nuevo estudiante\n 2. Calcular promedio\n 3. Salir del sistema."
+            "A continuación, seleccione la opción que desee:\n 1. Calcular promedio\n 2. Salir del sistema."
         )
     );
 
@@ -15,20 +15,6 @@ while (sistema) {
 
     switch (option) {
         case 1:
-            function crearAlumno(nombre, apellido, curso) {
-                const alumno = {
-                    nombre: prompt("Escriba el nombre del alumno"),
-                    apellido: prompt("Escriba el apellido del alumno"),
-                    curso: parseInt(prompt("Escriba el curso del alumno")),
-                    mostrarDatos: function () {
-                        alert("El alumno se llama " + this.nombre + " " + this.apellido + " y está en el curso " + this.curso);
-                    }
-                };
-                return alumno;
-            }
-            alert("El alumno ingresado es: " + crearAlumno().mostrarDatos());
-            break;
-        case 2:
             let nombre = prompt("Ingrese el nombre del alumno");
             let examen1 = parseInt(prompt("Ingrese la nota del primer examen"));
             let examen2 = parseInt(prompt("Ingrese la nota del segundo examen"));
@@ -43,7 +29,7 @@ while (sistema) {
                 alert("El alumno está desaprobado");
             }
             break;
-        case 3:
+        case 2:
             sistema = false;
             break;
         default:
