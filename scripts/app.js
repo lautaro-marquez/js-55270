@@ -15,10 +15,18 @@ while (sistema) {
 
     switch (option) {
         case 1:
-            // comentario random
-            // function crearAlumno() {
-            //     let nombre =
-            // }
+            function crearAlumno(nombre, apellido, curso) {
+                const alumno = {
+                    nombre: prompt("Escriba el nombre del alumno"),
+                    apellido: prompt("Escriba el apellido del alumno"),
+                    curso: parseInt(prompt("Escriba el curso del alumno")),
+                    mostrarDatos: function () {
+                        alert("El alumno se llama " + this.nombre + " " + this.apellido + " y está en el curso " + this.curso);
+                    }
+                };
+                return alumno;
+            }
+            alert("El alumno ingresado es: " + crearAlumno().mostrarDatos());
             break;
         case 2:
             let nombre = prompt("Ingrese el nombre del alumno");
@@ -29,9 +37,9 @@ while (sistema) {
             alert("El alumno " + nombre + " tiene promedio de: " + resultado);
             if (resultado >= 7 && resultado <= 10) {
                 alert("El alumno se encuentra promocionado.");
-            } else if (resultado > 4 && resultado < 7) {
+            } else if (resultado >= 4 && resultado < 7) {
                 alert("El alumno está en condición regular.");
-            } else if (resultado > 4){
+            } else {
                 alert("El alumno está desaprobado");
             }
             break;
